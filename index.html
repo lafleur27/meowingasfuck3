@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$FOMOC — Fomo Capital</title>
+  <meta name="description" content="Fomo Capital ($FOMOC) — a community-powered token. 50% of fees reward holders, 25% support the devs, 25% goes to FOMO.FAMILY. Built to share the FOMO.">
+  <link rel="icon" type="image/jpeg" href="logo-icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <img src="logo-icon.jpg" alt="" class="brand-mark">
+        <span>Fomo Capital</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#fees">Fees</a>
+        <a href="#flywheel">Flywheel</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-right">
+        <a href="https://x.com/fomocapital_sol" target="_blank" rel="noopener" class="nav-social" aria-label="Twitter / X">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.6l5.24 6.93zm-1.29 19.5h2.04L6.49 3.24H4.3z"/></svg>
+        </a>
+        <a href="https://t.me/fomocapital_sol" target="_blank" rel="noopener" class="nav-social" aria-label="Telegram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 2.29 1.79 10.5c-1.5.59-1.49 1.44-.27 1.8l5.11 1.6 1.96 6.04c.22.55.11.8.86.8.58 0 .83-.27 1.15-.59l2.76-2.68 5.73 4.24c1.06.59 1.82.28 2.08-.98l3.78-17.8c.39-1.74-.66-2.53-1.8-2.02z"/></svg>
+        </a>
+        <a href="#buy" class="btn btn-light btn-sm">Buy $FOMOC</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="badge"><i></i>Community-powered · 6% flat tax</span>
+        <h1>Built to share<br>the FOMO.</h1>
+        <p class="sub">
+          $FOMOC is Fomo Capital — a token designed around one idea: the people
+          who hold should be the first ones paid. Every trade feeds holders,
+          builders, and the FOMO.FAMILY burn engine.
+        </p>
+        <div class="actions">
+          <a href="#buy" class="btn btn-light">BUY $FOMOC</a>
+          <a href="#fees" class="btn btn-dim">See how fees work</a>
+        </div>
+        <div class="hero-ca">
+          <span>CA</span>
+          <code id="ca-text">HtgfqcohJW9Wh3tmTwf7hUpCho5GvzcEs3bvUgxD1REV</code>
+          <button class="copy-btn" data-copy="HtgfqcohJW9Wh3tmTwf7hUpCho5GvzcEs3bvUgxD1REV">Copy</button>
+        </div>
+        <dl class="hero-stats">
+          <div>
+            <dt><b class="num" data-count="6">0</b>%</dt>
+            <dd>Flat trade tax</dd>
+          </div>
+          <div>
+            <dt><b class="num" data-count="50">0</b>%</dt>
+            <dd>To holders</dd>
+          </div>
+          <div>
+            <dt><b class="num" data-count="50">0</b>%</dt>
+            <dd>Of profit → burn</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="hero-emblem">
+        <img src="logo-icon.jpg" alt="Fomo Capital emblem">
+        <span class="hero-tag">$FOMOC</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIVE STATS ===== -->
+  <section class="live" id="live">
+    <div class="container">
+      <div class="section-head">
+        <h2>$FOMOC live</h2>
+        <p>Real-time price and market data, pulled straight from the DEX.</p>
+      </div>
+      <div class="live-grid">
+        <div class="live-card">
+          <span class="live-label">Price</span>
+          <span class="live-value" id="stat-price">$—</span>
+          <span class="live-sub mono" id="stat-price-change">24h —</span>
+        </div>
+        <div class="live-card">
+          <span class="live-label">Market cap</span>
+          <span class="live-value" id="stat-mcap">$—</span>
+          <span class="live-sub mono" id="stat-mcap-label">—</span>
+        </div>
+        <div class="live-card">
+          <span class="live-label">24h volume</span>
+          <span class="live-value" id="stat-volume">$—</span>
+          <span class="live-sub mono" id="stat-volume-label">—</span>
+        </div>
+        <div class="live-card">
+          <span class="live-label">Liquidity</span>
+          <span class="live-value" id="stat-liq">$—</span>
+          <span class="live-sub mono" id="stat-liq-label">—</span>
+        </div>
+      </div>
+      <p class="live-source mono">Live via DexScreener · updates every 30s</p>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2>Simple by design</h2>
+        <p>No mints, no hidden levers, no dynamic taxes. One fee, three honest directions.</p>
+      </div>
+      <div class="bento">
+        <div class="b-card b-card-wide">
+          <h3>Holders come first</h3>
+          <p>Half of every fee is redistributed directly into $FOMOC wallets. No staking portals, no claim steps. If you hold, you earn — automatically, every trade.</p>
+        </div>
+        <div class="b-card">
+          <h3>Builders funded</h3>
+          <p>25% supports development, audits, and growth.</p>
+        </div>
+        <div class="b-card">
+          <h3>Family fed</h3>
+          <p>25% funds a FOMO.FAMILY trading account — whose profit burns for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEES ===== -->
+  <section class="section" id="fees">
+    <div class="container">
+      <div class="section-head">
+        <h2>Where the 6% goes</h2>
+        <p>A single fee per trade, split and accounted for. Nothing else is taken.</p>
+      </div>
+
+      <div class="fee-list">
+        <div class="fee-item">
+          <div class="fee-meta">
+            <span class="fee-pct">50%</span>
+            <div>
+              <h3>Holder rewards</h3>
+              <p>Auto-redistributed to $FOMOC wallets on every transaction.</p>
+            </div>
+          </div>
+          <div class="bar"><i style="--w:50%"></i></div>
+        </div>
+        <div class="fee-item">
+          <div class="fee-meta">
+            <span class="fee-pct">25%</span>
+            <div>
+              <h3>Developer treasury</h3>
+              <p>Funds builds, security, and the roadmap.</p>
+            </div>
+          </div>
+          <div class="bar"><i style="--w:25%"></i></div>
+        </div>
+        <div class="fee-item">
+          <div class="fee-meta">
+            <span class="fee-pct">25%</span>
+            <div>
+              <h3>FOMO.FAMILY</h3>
+              <p>Funds the account behind the buyback &amp; burn.</p>
+            </div>
+          </div>
+          <div class="bar"><i style="--w:25%"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLYWHEEL ===== -->
+  <section class="section" id="flywheel">
+    <div class="container">
+      <div class="section-head">
+        <h2>The flywheel</h2>
+        <p>25% of every fee lands in a FOMO.FAMILY trading account. Half of everything that account profits goes straight into buying and burning $FOMC — permanently out of supply.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step-n">1</span>
+          <h3>Trade settles</h3>
+          <p>The 6% tax is collected at swap.</p>
+        </div>
+        <div class="step">
+          <span class="step-n">2</span>
+          <h3>Family funded</h3>
+          <p>25% of the fee routes to the FOMO.FAMILY account.</p>
+        </div>
+        <div class="step">
+          <span class="step-n">3</span>
+          <h3>Profit → buyback</h3>
+          <p>The account trades. 50% of profit buys $FOMC on the open market.</p>
+        </div>
+        <div class="step">
+          <span class="step-n">4</span>
+          <h3>Burn</h3>
+          <p>Bought tokens go to the burn address. Supply never returns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container container-narrow">
+      <div class="section-head">
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>What is $FOMOC?</summary>
+          <p>The community token of Fomo Capital. A fixed 6% tax on trades, split 50% holders, 25% developers, 25% FOMO.FAMILY.</p>
+        </details>
+        <details>
+          <summary>How do I earn as a holder?</summary>
+          <p>By holding. Half of all fees collected are redistributed into $FOMOC wallets automatically. Busier markets mean fuller redistribution.</p>
+        </details>
+        <details>
+          <summary>What is the buyback &amp; burn?</summary>
+          <p>The FOMO.FAMILY account commits 50% of its trading profits to buying $FOMC from the open market and sending it to a burn address — permanently out of supply.</p>
+        </details>
+        <details>
+          <summary>Can the tax change?</summary>
+          <p>No. The rate is fixed at 6% and the split is published here. There are no mint functions or dynamic levers.</p>
+        </details>
+        <details>
+          <summary>Where do I buy?</summary>
+          <p>Through the launch links on this page. Connect a wallet, confirm, and you're earning from the next trade.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUY ===== -->
+  <section class="buy" id="buy">
+    <div class="container">
+      <div class="buy-card">
+        <h2>Ready when you are.</h2>
+        <p>Grab your $FOMOC, hold strong, and share the FOMO.</p>
+        <div class="actions">
+          <a href="#" class="btn btn-light">Buy $FOMOC</a>
+          <a href="https://t.me/fomocapital_sol" class="btn btn-dim" target="_blank" rel="noopener">Join Telegram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
