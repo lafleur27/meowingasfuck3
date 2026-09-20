@@ -41,7 +41,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="an-page">
     <!-- ===== ANALYTICS HERO ===== -->
     <section class="hero an-hero">
       <div class="container hero-inner">
@@ -105,12 +105,9 @@
           <p>Full candlesticks, liquidity, and order flow — hosted by DexScreener.</p>
         </div>
         <div class="chart-card">
-          <iframe
-            src="https://dexscreener.com/solana/BQ12haucCzhBqyYfuxhcovysh85WeB6ZFQTdrFwKmREV?embed=1&theme=dark"
-            title="$FOMOC chart on DexScreener"
-            loading="lazy"
-            allow="clipboard-write"
-          ></iframe>
+          <div class="chart-plot" id="chart-plot" aria-label="$FOMOC price chart">
+            <p class="chart-empty" id="chart-empty">Loading chart…</p>
+          </div>
         </div>
         <p class="chart-open">
           <a href="https://dexscreener.com/solana/BQ12haucCzhBqyYfuxhcovysh85WeB6ZFQTdrFwKmREV" target="_blank" rel="noopener" class="btn btn-dim">
