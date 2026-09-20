@@ -61,7 +61,7 @@ document.querySelectorAll(".copy-btn").forEach(btn => {
 // ---------- live stats (DexScreener, no key) ----------
 // Free, keyless, no backend. Set the $FOMOC token address (CA) below.
 // DexScreener resolves it and returns real price / mcap / volume / liquidity.
-const FOMOC_CA = "53vSSNLZhpWGPgdTuApFszRukwC5dct8vEsB9wCZeREV";
+const FOMOC_CA = "BQ12haucCzhBqyYfuxhcovysh85WeB6ZFQTdrFwKmREV";
 
 const $ = id => document.getElementById(id);
 const fmt = n =>
